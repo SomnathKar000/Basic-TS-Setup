@@ -1,20 +1,64 @@
-Basic-TS-Setup: A Simple TypeScript Setup with Nodemon & TS-Node
+# Basic-TS-Setup 🚀
 
-This repository demonstrates a minimal setup for running TypeScript files seamlessly using nodemon and ts-node. The configuration allows automatic compilation and execution of TypeScript files whenever changes are detected.
+A minimal TypeScript setup using **nodemon** and **ts-node** for seamless development.
 
-Features
-• Live reloading using nodemon
-• TypeScript execution without manual compilation via ts-node
-• Simple configuration with a nodemon.json file to watch .ts files in the src directory
+## Features
 
-Setup & Usage 1. Install dependencies:
+- 🔄 **Live reloading** with `nodemon`
+- 📌 **No manual compilation** using `ts-node`
+- 📂 Watches `.ts` files inside the `src/` directory
 
+## Installation & Usage
+
+### 1️⃣ Install dependencies
+
+```sh
 npm install
 
-    2.	Start development mode:
+2️⃣ Start development mode
 
 npm run dev
 
-    3.	Place your TypeScript files inside the src/ folder. The entry point is src/index.ts.
+3️⃣ Project Structure
 
-This setup provides a lightweight way to work with TypeScript efficiently in a Node.js environment. 🚀
+📁 explore-ts
+ ┣ 📁 src
+ ┃ ┗ 📜 index.ts  # Entry point
+ ┣ 📜 package.json
+ ┣ 📜 nodemon.json
+ ┗ 📜 README.md
+
+Configuration
+
+package.json
+
+{
+  "name": "explore-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
+  }
+}
+
+nodemon.json
+
+{
+  "watch": ["src"],
+  "ext": "ts",
+  "exec": "ts-node ./src/index.ts"
+}
+
+Notes
+	•	Ensure you have Node.js installed.
+	•	The entry file should be src/index.ts.
+	•	Modify nodemon.json to watch additional files if needed.
+
+Happy Coding! 🚀
+
+Would you like any modifications or additional sections? 😊
+```
