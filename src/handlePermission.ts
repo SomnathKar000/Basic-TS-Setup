@@ -10,14 +10,17 @@ const ROLES = {
 } as const;
 
 type Role = keyof typeof ROLES;
-export type Permission = (typeof ROLES)[Role][number];
-export interface User {
+type Permission = (typeof ROLES)[Role][number];
+type User = {
   id: string;
   role: Role;
-}
-export function hasPermission(
+};
+
+function hasPermission(
   user: { id: string; role: Role },
   permission: Permission
 ): boolean {
   return (ROLES[user.role] as readonly Permission[]).includes(permission);
 }
+
+export { Permission, User, hasPermission };
