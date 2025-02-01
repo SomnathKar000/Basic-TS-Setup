@@ -59,10 +59,7 @@ In the nodemon.json file, these fields are configuring how Nodemon watches and r
 1. watch: [“src”]
 
    - This tells Nodemon to watch the "src" directory for any changes.
-   - If any file inside "src" changes, Nodemon will restart the application. 2. ext: “ts”
-   - Specifies the file extensions that Nodemon should watch.
-   - In this case, it only watches .ts (TypeScript) files.
-   - If you also wanted to watch JavaScript files, you could use:
+   - If any file inside "src" changes, Nodemon will restart the application.
 
 2. "ext": "ts,js"
 
