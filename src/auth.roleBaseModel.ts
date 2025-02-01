@@ -5,8 +5,18 @@ const ROLES = {
     "update: comments",
     "delete: comments",
   ],
-  moderator: ["view: comments", "create: comments", "delete: comments"],
-  user: ["view: comments", "create: comments"],
+  moderator: [
+    "view: comments",
+    "create: comments",
+    "update: ownComments",
+    "delete: comments",
+  ],
+  user: [
+    "view: comments",
+    "create: comments",
+    "update: ownComments",
+    "delete: own Comments",
+  ],
 } as const;
 
 type Role = keyof typeof ROLES;
