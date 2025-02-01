@@ -57,33 +57,32 @@ nodemon.json
 In the nodemon.json file, these fields are configuring how Nodemon watches and restarts your TypeScript application. Here’s what each field means:
 
 1. watch: [“src”]
-   • This tells Nodemon to watch the "src" directory for any changes.
-   • If any file inside "src" changes, Nodemon will restart the application. 2. ext: “ts”
-   • Specifies the file extensions that Nodemon should watch.
-   • In this case, it only watches .ts (TypeScript) files.
-   • If you also wanted to watch JavaScript files, you could use:
+
+   - This tells Nodemon to watch the "src" directory for any changes.
+   - If any file inside "src" changes, Nodemon will restart the application. 2. ext: “ts”
+   - Specifies the file extensions that Nodemon should watch.
+   - In this case, it only watches .ts (TypeScript) files.
+   - If you also wanted to watch JavaScript files, you could use:
 
 2. "ext": "ts,js"
-   • Specifies the file extensions that Nodemon should watch.
-   • In this case, it only watches .ts (TypeScript) files.
-   • If you also wanted to watch JavaScript files, you could use:
+
+   - Specifies the file extensions that Nodemon should watch.
+   - In this case, it only watches .ts (TypeScript) files.
+   - If you also wanted to watch JavaScript files, you could use:
 
    ```sh
    "ext": "ts,js"
    ```
 
 3. exec: “ts-node ./src/index.ts”
-   • This is the command Nodemon executes when restarting.
-   • It runs ts-node ./src/index.ts, which compiles and runs the TypeScript file index.ts using ts-node.
+   - This is the command Nodemon executes when restarting.
+   - It runs ts-node ./src/index.ts, which compiles and runs the TypeScript file index.ts using ts-node.
 
 How It Works
 • If any .ts file in src/ changes, Nodemon automatically restarts ts-node ./src/index.ts.
 
 Notes
-• Ensure you have Node.js installed.
-• The entry file should be src/index.ts.
-• Modify nodemon.json to watch additional files if needed.
 
-Happy Coding! 🚀
-
-Would you like any modifications or additional sections? 😊
+- Ensure you have Node.js installed.
+- The entry file should be src/index.ts.
+- Modify nodemon.json to watch additional files if needed.
