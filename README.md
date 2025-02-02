@@ -76,7 +76,7 @@ In the nodemon.json file, these fields are configuring how Nodemon watches and r
    - It runs ts-node ./src/index.ts, which compiles and runs the TypeScript file index.ts using ts-node.
 
 How It Works
-• If any .ts file in src/ changes, Nodemon automatically restarts ts-node ./src/index.ts.
+- If any .ts file in src/ changes, Nodemon automatically restarts ts-node ./src/index.ts.
 
 Notes
 
